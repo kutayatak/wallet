@@ -119,9 +119,9 @@ function applySettings() {
   <div class="tab-content">
     <div id="summaryTab" class="tab-pane fade show active">
       <p id="summary"></p>
-      <canvas id="summaryChart" height="150"></canvas>
+      <canvas id="summaryChart" height="150" style="max-width: 400px; margin: auto; display: block;"></canvas>
       <h4 class="mt-4">Gider Kategorileri</h4>
-      <canvas id="categoryChart" height="150"></canvas>
+      <canvas id="categoryChart" height="150" style="max-width: 400px; margin: auto; display: block;"></canvas>
       <h4 class="mt-4">Aylık Gelir-Gider Geçmişi</h4>
       <canvas id="historyChart" height="150"></canvas>
       <h4 class="mt-4">Birikim Durumu</h4>
@@ -414,6 +414,9 @@ function handleImport() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+  if (localStorage.getItem('budgetData')) {
+    loadData();
+  }
   const today = new Date().toISOString().substring(0, 7);
   const expenseDate = document.getElementById('expenseDate');
   const incomeDate = document.getElementById('incomeDate');
