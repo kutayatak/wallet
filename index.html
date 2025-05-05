@@ -98,9 +98,11 @@ function applySettings() {
   canvas {
     width: 100% !important;
     height: auto !important;
-    max-width: 100%;
+    max-width: 100vw;
+    max-height: none;
     display: block;
     margin: auto;
+    aspect-ratio: 4 / 3;
   }
 
   @media (max-width: 768px) {
