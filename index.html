@@ -26,28 +26,20 @@ function applySettings() {
       background-color: #1c1c1c !important;
       color: #f1f1f1 !important;
     }
-    .dark-mode input::placeholder,
-    .dark-mode textarea::placeholder,
-    .dark-mode select::placeholder {
-      color: #aaa !important;
-      opacity: 1;
-    }
     .dark-mode input, .dark-mode textarea, .dark-mode select {
       background-color: #2c2c2c !important;
       color: #f1f1f1 !important;
     }
-    .tab-pane { display: none; }
-    .tab-pane.show.active { display: block; }
+    .dark-mode .form-control::placeholder {
+      color: #aaa !important;
+      opacity: 1;
+    }
     .dark-mode .list-group-item {
       background-color: #2a2a2a !important;
       color: #fff !important;
     }
     .dark-mode .btn {
       border-color: #555 !important;
-    }
-    .dark-mode .form-control {
-      background-color: #2c2c2c !important;
-      color: #fff !important;
     }
     .dark-mode .dropdown-menu {
       background-color: #2c2c2c !important;
@@ -58,6 +50,30 @@ function applySettings() {
     }
     .dark-mode .dropdown-item:hover {
       background-color: #3a3a3a !important;
+    }
+
+    /* Mobil uyumluluk iyileştirmeleri */
+    html {
+      font-size: 16px;
+    }
+    @media (max-width: 768px) {
+      html {
+        font-size: 18px;
+      }
+      h1#appTitle {
+        font-size: 1.8rem;
+      }
+      .form-control, .btn, .dropdown-menu, select {
+        font-size: 1rem;
+      }
+      canvas {
+        width: 100% !important;
+        height: auto !important;
+      }
+      .container {
+        padding-left: 10px;
+        padding-right: 10px;
+      }
     }
 </style>
 </head>
