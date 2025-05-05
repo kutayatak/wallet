@@ -76,7 +76,7 @@ function applySettings() {
   }
 
   h1#appTitle {
-    font-size: 2rem;
+    font-size: 2.2rem;
     text-align: center;
   }
 
@@ -87,8 +87,9 @@ function applySettings() {
   .form-control,
   .btn,
   .dropdown-menu,
-  select {
-    font-size: 1rem;
+  select,
+  .dropdown-item {
+    font-size: 1.15rem;
   }
 
   .progress {
@@ -98,16 +99,14 @@ function applySettings() {
   canvas {
     width: 100% !important;
     height: auto !important;
-    max-width: 100vw;
-    max-height: none;
+    max-width: 100%;
     display: block;
-    margin: auto;
-    aspect-ratio: 4 / 3;
+    margin: 0 auto 1.5rem;
   }
 
   @media (max-width: 768px) {
     html {
-      font-size: 18px;
+      font-size: 20px;
     }
 
     .container {
@@ -117,16 +116,51 @@ function applySettings() {
     .form-control,
     .btn,
     .dropdown-menu,
-    select {
-      font-size: 1.1rem;
-    }
-
-    .progress {
-      height: 1.25rem;
+    select,
+    .dropdown-item {
+      font-size: 1.25rem;
     }
 
     h1#appTitle {
-      font-size: 2.2rem;
+      font-size: 2.5rem;
+    }
+
+    .progress {
+      height: 1.4rem;
+    }
+
+    .dropdown-toggle {
+      font-size: 1.3rem;
+    }
+
+    .dropdown-menu {
+      min-width: 100% !important;
+      text-align: center;
+    }
+
+    .dropdown-item {
+      padding: 1rem;
+    }
+  }
+
+    .container {
+      padding: 1rem 0.5rem;
+    }
+
+    .form-control,
+    .btn,
+    .dropdown-menu,
+    select,
+    .dropdown-item {
+      font-size: 1.2rem;
+    }
+
+    h1#appTitle {
+      font-size: 2.4rem;
+    }
+
+    .progress {
+      height: 1.3rem;
     }
   }
 </style>
@@ -139,19 +173,18 @@ function applySettings() {
 
 
 <div class="container">
-  <div class="dropdown mb-4 d-flex justify-content-between align-items-center">
-    <div>
-      <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+  <div class="dropdown mb-4">
+      <button class="btn btn-primary dropdown-toggle w-100" type="button" data-bs-toggle="dropdown" aria-expanded="false">
         Menü
       </button>
-      <ul class="dropdown-menu">
-        <li><a class="dropdown-item" href="#" onclick="showTab('summaryTab')">Ana Sayfa</a></li>
-        <li><a class="dropdown-item" href="#" onclick="showTab('incomeTab')">Gelir</a></li>
-        <li><a class="dropdown-item" href="#" onclick="showTab('expenseTab')">Gider</a></li>
-        <li><a class="dropdown-item" href="#" onclick="showTab('debtTab')">Borçlar</a></li>
-        <li><a class="dropdown-item" href="#" onclick="showTab('savingsTab')">Birikim</a></li>
-        <li><a class="dropdown-item" href="#" onclick="showTab('settingsTab')">Ayarlar</a></li>
-      </ul>
+      <ul class="dropdown-menu w-100 text-center">
+  <li><a class="dropdown-item" href="#" onclick="showTab('summaryTab')">Ana Sayfa</a></li>
+  <li><a class="dropdown-item" href="#" onclick="showTab('incomeTab')">Gelir</a></li>
+  <li><a class="dropdown-item" href="#" onclick="showTab('expenseTab')">Gider</a></li>
+  <li><a class="dropdown-item" href="#" onclick="showTab('debtTab')">Borçlar</a></li>
+  <li><a class="dropdown-item" href="#" onclick="showTab('savingsTab')">Birikim</a></li>
+  <li><a class="dropdown-item" href="#" onclick="showTab('settingsTab')">Ayarlar</a></li>
+</ul>
     </div>
       </div>
 
